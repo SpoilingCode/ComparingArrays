@@ -17,28 +17,37 @@ public class ArraysComparing {
     public static void main(String[] args) {
         // TODO code application logic here
         int [] masFirst = {1,2,3,4,5,6,7,8,9,10};
-        int [] masSecond = {10,9,8,7,6,5,4,3,2,1};
-        int count=10;
+        int [] masSecond = {1,2,3,4,5,6,7,8,9,10};
+        equals(masFirst,masSecond);
         
-         for(int i=0; i<count; i++)
-         {
-             for(int j=0; j<count; j++)
-             {
-              if(masFirst[i] == masSecond[j])
-              {
-                  System.out.println("Массивы совпадают");
-                 
-              } 
-              else 
-                  
-               if( masFirst[i] != masSecond[j] && j==9 )
-               {
-                   System.out.println("Массивы не совпадают");
-               }
-             } 
-             break;
-             
-         }
+        
+        if(equals(masFirst,masSecond) == false)
+        {
+            System.out.println("Массивы не совпадают");
+        }else
+        {
+            System.out.println("Массивы совпадают");
+        }
+       
+        
     }
+         static boolean equals(int first[],int second[])
+         {
+            if( first.length != second.length)
+            {
+               return false;
+            }
+            int count = first.length;
+            
+              for(int i=0; i<count; i++)
+              {
+                  if(first[i] != second[i])
+                      return false;
+              }
+              return true;
+              
+              
+              
+         }
     
 }
