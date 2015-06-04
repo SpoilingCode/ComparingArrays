@@ -30,8 +30,14 @@ public class ArraysComparing {
                  
               } 
               else 
-                  System.out.println("Массивы не совпадают");
-             }
+                  
+               if( masFirst[i] != masSecond[j] && j==9 )
+               {
+                   System.out.println("Массивы не совпадают");
+               }
+             } 
+             break;
+             
          }
     }
     
